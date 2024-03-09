@@ -1,0 +1,51 @@
+#normal
+{
+    background-color: red;
+    width:50vw;
+}
+
+#parent
+{
+    border: 2px solid black;
+    width:50vw;
+    margin:10px 0px;
+}
+
+#child
+{
+    margin:10px 0px;
+    background-color: red;
+    width:50vw;
+}
+
+/* viewport height= height of screen 
+viewport width= width of screen 
+whatever will be the height/width of screen(website) , with respect to that size is set.
+50vw means 50% of viewport width , website mei jitna bhi width avail h uska 50%
+100vw means 100% of viewport width , website mei jitna bhi width avail h uska 100%
+doesn't depend on parent's (container) size */
+
+body
+{
+   min-height:100vh;
+}
+
+/* body element doesn't have any height by default. Its height is calculates/determined based on the elements inside it. So basically it doesn't have any height.
+
+And coming to your confusion between 100% and 100vh, when you use 100% with any property, we are saying to take 100% value from its parent.
+
+So when you use min-height :100% it doesn't work because it's parent doesn't have any height and the same gets applied to the body as well.
+
+Where as 100vh means 100 view height which means 100% of the view height of the window.
+
+So it will occupies whole screen height. */
+
+/* The white box is centered according to the parent container. If the parent container is same in height as the white box then it will not be vertically centered in the parent container.
+
+For the white box to be centered vertically in the screen you should set the minimum height of the parent container of the white box to be 100vh. So that the parent container takes the complete height of screen and white box is placed in the center of that container i-e screen. */
+
+/* height: 100vh will make the element the height of the viewport (but will cause scrollbars on mobile devices) */
+
+/* height: 100vh;: This CSS property sets the height of an element to be exactly 100% of the viewport height (vh). It means that the element will always occupy the entire height of the viewport, regardless of the content inside it. If the content exceeds the viewport height, it will overflow and might cause scrolling.
+
+min-height: 100vh;: This CSS property sets the minimum height of an element to be 100% of the viewport height. Unlike height: 100vh;, min-height: 100vh; ensures that the element's height is at least the height of the viewport. If the content inside the element is larger than the viewport height, the element will expand to accommodate it. However, if the content is smaller than the viewport height, the element will only be as tall as its content, but it won't collapse to a smaller height than the viewport. */
